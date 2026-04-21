@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  retro-racer:
+    build: .
+    container_name: retro-racer
+    restart: unless-stopped
+    ports:
+      - "3070:3070"
+    volumes:
+      - retro-racer-data:/usr/src/app/data
+
+volumes:
+  retro-racer-data:
+    name: retro-racer-data

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Racer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        
+        <div id="ui-layer">
+            <div id="start-screen" class="screen">
+                <h1>RETRO RACER</h1>
+                <p>Use Left/Right Arrows or A/D to steer</p>
+                <button id="start-btn" class="arcade-btn">START GAME</button>
+                <div class="leaderboard-preview">
+                    <h3>HIGH SCORES</h3>
+                    <ul id="start-highscores"></ul>
+                </div>
+            </div>
+
+            <div id="hud" class="hidden">
+                <div class="score-display">SCORE: <span id="current-score">0</span></div>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h1>CRASHED!</h1>
+                <p>FINAL SCORE: <span id="final-score">0</span></p>
+                
+                <div id="name-input-section">
+                    <p>NEW HIGH SCORE!</p>
+                    <input type="text" id="player-name" placeholder="ENTER NAME" maxlength="10">
+                    <button id="submit-score-btn" class="arcade-btn">SUBMIT</button>
+                </div>
+
+                <div class="leaderboard">
+                    <h3>HIGH SCORES</h3>
+                    <ul id="gameover-highscores"></ul>
+                </div>
+                
+                <button id="restart-btn" class="arcade-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
